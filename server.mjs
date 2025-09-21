@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import connectDB from './db/conn.mjs';
 import globalErr from './middleware/globalErr.mjs';
 import log from './middleware/loggingMiddleware.mjs';
+import userRoutes from './routes/userRoutes.mjs'
 
 // Setup
 dotenv.config()
@@ -17,6 +18,8 @@ connectDB();
 app.use(express.json())
 
 // Routes
+app.use('/api/user', userRoutes);
+
 
 //Global Error Handling Middleware
 app.use(globalErr);
