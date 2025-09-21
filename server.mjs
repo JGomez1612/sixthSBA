@@ -22,7 +22,6 @@ app.use(express.json())
 app.use(globalErr);
 app.use(log);
 
-
 // Server Listener
 app.listen(PORT, () => {
     console.log(`Server running on PORT: ${PORT}`)
