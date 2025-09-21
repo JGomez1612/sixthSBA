@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
 const gameSchema = new mongoose.Schema({
-    title: { type: String, required: true},
-    developer: {type: String},
-    publisher: {type: String},
-    releaseDate: {type: String},
+    title: { type: String, required: true },
+    developer: { type: String },
+    publisher: { type: String },
+    releaseDate: { type: String },
     genre: { type: String,
         enum: {
             values: [
@@ -20,7 +20,7 @@ const gameSchema = new mongoose.Schema({
             ],
             message: `{VALUE} is not supported`
         },
-        required: true},
+        required: true },
 });
 
 export default mongoose.model("Game", gameSchema);

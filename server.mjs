@@ -5,7 +5,8 @@ import connectDB from './db/conn.mjs';
 import globalErr from './middleware/globalErr.mjs';
 import log from './middleware/loggingMiddleware.mjs';
 import userRoutes from './routes/userRoutes.mjs';
-import gameRoutes from './routes/gameRoutes.mjs'
+import gameRoutes from './routes/gameRoutes.mjs';
+import reviewRoutes from './routes/reviewRoutes.mjs';
 
 // Setup
 dotenv.config()
@@ -21,7 +22,7 @@ app.use(express.json())
 // Routes
 app.use('/api/user', userRoutes);
 app.use('/api/game', gameRoutes);
-
+app.use('/api/review', reviewRoutes)
 
 //Global Error Handling Middleware
 app.use(globalErr);
