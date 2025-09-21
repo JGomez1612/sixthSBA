@@ -26,7 +26,7 @@ router
             console.error(error.message);
             res.status(500).json({ msg: `Error - ${error.message}`});
         }
-    })
+    });
 
 
 // Update
